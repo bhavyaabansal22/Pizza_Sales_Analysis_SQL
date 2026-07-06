@@ -1,0 +1,16 @@
+SELECT * FROM mypizza.pizza_types;
+
+CREATE TABLE orders(
+	order_id INT NOT NULL,
+    order_data DATE NOT NULL,
+	order_time TIME NOT NULL,
+    PRIMARY KEY(order_id)
+);
+
+CREATE TABLE order_details(
+	order_detail_id INT NOT NULL,
+    order_id INT NOT NULL,
+	pizza_id TEXT NOT NULL,
+    quantity INT NOT NULL,
+    PRIMARY KEY(order_detail_id)
+);
